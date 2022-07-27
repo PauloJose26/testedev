@@ -1,2 +1,179 @@
 /* Coloque o CSS neste arquivo */
+/* RESET CSS */
+body, header, main, section, div, article, nav, button, i, input, figure, h1, h2, h3, p, span, a {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background-color: transparent;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    outline: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* HEADER E BANNER DO SITE */
+header, main{
+    width: 100%;
+    max-width: 1170px;
+}
+
+
+
+/* SEARCH */
+
+.header--logo {
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.search {
+    position: relative;
+    width: 100%;
+    max-width: 180px;
+}
+
+.search--button {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    display: flex;
+    font-size: 26px;
+    color: rgb(116, 116, 116);
+    cursor: pointer;
+}
+
+.search--input {
+    width: 100%;
+    padding: 10px 5px;
+    border: 2px solid rgb(165, 165, 165);
+}
+
+.search--input:focus {
+    border: 2px solid rgb(0, 0, 0);
+}
+
+
+
+/* LOGO PETS */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo--image {
+    position: relative;
+}
+
+.logo--heart {
+    font-size: 80px;
+    color: rgb(255, 187, 0);
+}
+
+.logo--paw {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(50%, 50%);
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+}
+
+.logo--title {
+    color: gray;
+    font-weight: 200;
+    font-size: 40px;
+}
+
+.logo--title--cursive {
+    color: rgb(0, 0, 170);
+    font-size: 50px;
+    font-weight: 200;
+    font-style: italic;
+    font-family: 'Cookie', 'cursive';
+}
+
+
+
+/* PROFILE */
+
+.profile {
+    color: rgb(116, 116, 116);
+    font-size: 25px;
+    display: flex;
+    gap: 5px;
+}
+
+.profile i {
+    cursor: pointer;
+}
+
+.profile--cart {
+    position: relative;
+}
+
+.profile--cart span {
+    position: absolute;
+    padding: 2px;
+    border-radius: 50%;
+    top: -10px;
+    right: -10px;
+    background-color: rgb(255, 187, 0);
+    font-size: 12px;
+    font-weight: 700;
+    color: white;
+}
+
+
+
+/* MENU */
+
+.header--menu {
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    background-color: rgb(140, 0, 158);
+    color: white;
+    font-weight: bolder;
+}
+
+.header--menu a {
+    color: white;
+}
+
+.header--menu .bars{
+    color: rgb(255, 165, 0);
+    font-size: 25px;
+    display: flex;
+}
+
+
+
+/* BANNER */
+
+.banner--image {
+    width: 100%;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.banner--image img {
+    width: 100%;
+}
