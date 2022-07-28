@@ -1,6 +1,6 @@
 /* Coloque o CSS neste arquivo */
 /* RESET CSS */
-body, header, main, section, div, article, nav, button, i, input, figure, h1, h2, h3, p, span, a {
+body, header, main, section, div, article, nav, button, i, input, figure, figcaption, img, h1, h2, h3, h4, p, span, a, ul, li {
     padding: 0;
     margin: 0;
     border: 0;
@@ -22,6 +22,13 @@ body {
 header, main{
     width: 100%;
     max-width: 1170px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
 }
 
 
@@ -79,7 +86,7 @@ header, main{
 
 .logo--heart {
     font-size: 80px;
-    color: rgb(255, 187, 0);
+    color: rgb(240, 158, 6);
 }
 
 .logo--paw {
@@ -92,7 +99,7 @@ header, main{
 }
 
 .logo--title {
-    color: gray;
+    color: rgb(116, 116, 116);
     font-weight: 200;
     font-size: 40px;
 }
@@ -133,7 +140,7 @@ header, main{
     background-color: rgb(255, 187, 0);
     font-size: 12px;
     font-weight: 700;
-    color: white;
+    color: rgb(255, 255, 255);
 }
 
 
@@ -148,12 +155,12 @@ header, main{
     align-items: center;
     gap: 25px;
     background-color: rgb(140, 0, 158);
-    color: white;
+    color: rgb(255, 255, 255);
     font-weight: bolder;
 }
 
 .header--menu a {
-    color: white;
+    color: rgb(255, 255, 255);
 }
 
 .header--menu .bars{
@@ -167,13 +174,423 @@ header, main{
 /* BANNER */
 
 .banner--image {
+    position: relative;
     width: 100%;
     height: 350px;
     display: flex;
     align-items: center;
+    justify-content: center;
     overflow: hidden;
 }
 
 .banner--image img {
     width: 100%;
+}
+
+.banner--comeback, .banner--advance{
+    position: absolute;
+    top: 0;
+    width: 20%;
+    height: 100%;
+    font-size: 60px;
+    color: rgb(192, 192, 192);
+}
+
+.banner--comeback{
+    left: 0;
+}
+
+.banner--advance{
+    right: 0;
+}
+
+.banner--options{
+    background-color: rgb(255, 165, 0);
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.banner--options--image {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    height: 100px;
+    overflow: hidden;
+}
+
+.banner--options--image img {
+    width: 100%;
+}
+
+.banner--options--image figcaption {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0, 0.7);
+    text-transform: uppercase;
+}
+
+
+
+/* NOVIDADES */
+
+.news {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.news--title {
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: rgb(116, 116, 116);
+}
+
+.news--list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.news--list li {
+    position: relative;
+    width: 100%;
+    max-width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.news--list figure{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.news--list img {
+    height: 200px;
+}
+
+.news--list .detach {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 5px;
+    background-color: rgb(138, 43, 226);
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    border-radius: 3px;
+}
+
+.news--list h4 {
+    font-size: 18px;
+    font-weight: normal;
+    text-align: center;
+    margin: 15px 0;
+    color: rgb(116, 116, 116);
+}
+
+.news--list .price {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    font-weight: bold;
+    color: rgb(99, 99, 99);
+}
+
+.news--list .old--price, .news--list .installments {
+    font-weight: normal;
+    text-decoration:  line-through;
+    color: rgb(116, 116, 116);
+}
+
+
+
+/* OPTIONS */
+.section--options {
+    display: flex;
+    justify-content: space-between;
+}
+
+.options--itens {
+    position: relative;
+    width: 49%;
+}
+
+.options--itens img {
+    width: 100%;
+    height: 100%;
+}
+
+.options--itens .options--button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.options--itens .options--button span {
+    position: absolute;
+    bottom: 10%;
+}
+
+.options--itens .for--cats span {
+    right: 0;
+}
+
+.options--itens .for--dogs span {
+    left: 0;
+}
+
+.options--itens .options--button span{
+    padding: 10px 20px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(219, 143, 0);
+    text-transform: uppercase;
+}
+
+
+
+/* DESTAQUE */
+
+.emphasis {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.emphasis--title {
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: rgb(116, 116, 116);
+}
+
+.emphasis--list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+
+
+/* ASSINATURA */
+
+
+.newsletter{
+    width: 100%;
+    background-color: rgb(138, 43, 226);
+}
+
+.newsletter--benefits {
+    width: 100%;
+    padding: 15px;
+    border-bottom: 2px solid rgb(255, 187, 0);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.newsletter--options {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.newsletter--image {
+    position: relative;
+}
+
+.newsletter--heart {
+    font-size: 40px;
+    color: rgb(240, 158, 6);
+    display: flex;
+}
+
+.newsletter--paw {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    transform: translate(50%, 50%);
+    font-size: 20px;
+    color: rgb(138, 43, 226);
+}
+
+.newsletter--descriptions {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+}
+
+.newsletter--signature {
+    width: 100%;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.newsletter--signature hgroup {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.newsletter--signature h2, .newsletter--signature h3 {
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.newsletter--signature h2 {
+    text-transform: uppercase;
+}
+
+.newsletter--signature h3 {
+    font-weight: normal;
+    font-size: 14px;
+}
+
+.newsletter--signature--register {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.newsletter--signature--register input {
+    padding: 10px 0;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+}
+
+.newsletter--signature--register input::placeholder{
+    color: rgb(199, 199, 199);
+}
+
+.newsletter--signature--register button {
+    padding: 10px;
+    font-size: 14px;
+    background-color: rgb(240, 158, 6);
+    color: rgb(255, 255, 255);
+}
+
+
+
+/* DESCRIÇÃO E CONTATO */
+
+.informations {
+    width: 100%;
+}
+
+.descriptions{
+    display: flex;
+    justify-content: space-between;
+}
+
+.descriptions--contact {
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px;
+}
+
+.descriptions--contact--links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.descriptions--contact--links a {
+    font-size: 20px;
+    display: flex;
+}
+
+.descriptions--contact--links .icon--instagram, .descriptions--contact--links .icon--twitter {
+    display: flex;
+    padding: 5px;
+    border-radius: 50%;
+    background-color: rgb(116, 116, 116);
+    color: rgb(255, 255, 255);
+}
+
+.descriptions--contact--links .icon--facebook {
+    color: rgb(240, 158, 6);
+    font-size: 30px;
+}
+
+.descriptions--info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+    color: rgb(116, 116, 116);
+}
+
+.descriptions--company {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 15px;
+}
+
+.descriptions--company h4 {
+    color: rgb(59, 59, 196);
+}
+
+.descriptions--company p, .descriptions--company a {
+    color: rgb(116, 116, 116);
+}
+
+.descriptions--company--payments {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 200px;
+}
+
+.descriptions--company--payments img {
+    width: 50px;
+}
+
+.baseboard {
+    width: 100%;
+    padding: 20px;
+    margin-top: 30px;
+    border-top: 1px solid rgb(116, 116, 116);
+    color: rgb(116, 116, 116);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.baseboard img{
+    width: 70px;
 }
