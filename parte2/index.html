@@ -24,7 +24,15 @@
 
 		<!--- RESPOSTA 1 ---->
 		<script>
+			let numbers = [];
+			for(let x = 0; x <= 100; x++){
+				if(x % 7 === 0){
+					numbers.push(x);
+				}
+			}
+
 			console.log('resposta 1');
+			console.log(numbers);
 			//insira a resposta aqui.
 		</script>
 
@@ -33,7 +41,22 @@
 		<p>2)Crie uma função que receba dois parâmetros, o primeiro chamado 'texto' (string) e o segundo chamado 'vezes' (número), com o objetivo retornar uma nova string com o texto repetido quantas vezes foi passado no parâmetro 'vezes', separado por vírgula. Exibir esta nova string no console.</p>
 		<!--- RESPOSTA 2 ---->
 		<script>
+			function replicate(texto, vezes){
+				let result = "";
+				for(let x = 1; x <= vezes; x++){
+					if(x == vezes){
+						result += texto;
+						continue;
+					}
+
+					result += `${ texto }, `;
+				}
+
+				return result;
+			}
+
 			console.log('resposta 2');
+			console.log(replicate("texto", 10));
 			//insira a resposta aqui.
 		</script>
 
@@ -48,7 +71,12 @@
 
 		<!--- RESPOSTA 3 ---->
 		<script>
+			let pai = document.querySelector(".pai");
+			let filho = document.querySelector(".filho");
+			pai.appendChild(filho);
+
 			console.log('resposta 3');
+			console.log('let pai = document.querySelector(".pai");\nlet filho = document.querySelector(".filho");\npai.appendChild(filho);');
 			//insira a resposta aqui.
 		</script>
 		<div class="border"></div>
@@ -67,7 +95,12 @@
 			<p>texto</p>
 		</div>
 		<script>
+			let div = document.querySelector("div:not([class])");
+			div.children[1].innerText = "Texto alterado";
+			div.children[2].classList.add("last");
+
 			console.log('resposta 4');
+			console.log('let div = document.querySelector("div:not([class])");\ndiv.children[1].innerText = "Texto alterado";\ndiv.children[2].classList.add("last");');
 			//insira a resposta aqui.
 		</script>
 		<div class="border"></div>
@@ -76,7 +109,12 @@
 
 		<!--- RESPOSTA 5 ---->
 		<script>
+			function checkLegalAge(idade){
+				return (idade >= 18)? "maior de idade" : "menor de idade";
+			}
+
 			console.log('resposta 5');
+			console.log(checkLegalAge(15));
 			//insira a resposta aqui.
 		</script>
 		<div class="border"></div>
@@ -91,11 +129,20 @@
 		</ol>
 		<!--- RESPOSTA 6 ---->
 		<script>
-			console.log('resposta 6');
-			var obj = {
+			let obj = {
 				nomeObj: 'Mouse',
 				pesoObj: '150g'
 			}
+
+			function listObj(dict){
+				dict["nomeObj"] = "Teclado";
+				dict["pesoObj"] = "500g";
+
+				return Object.values(dict);
+			}
+
+			console.log('resposta 6');
+			console.log(listObj(obj));
 			//insira a resposta aqui.
 		</script>
 		<div class="border"></div>
@@ -109,7 +156,18 @@
 		</ol>
 		<!--- RESPOSTA 7 ---->
 		<script>
+			let txt = "Eu quero trabalhar na Seri.e Design";
+
+			let results = [];
+			results.push(txt.split(" ").reverse().join("?"));
+			results.push(txt.split(" ").at(-1));
+			results.push(txt.length);
+			results.push(typeof txt);
+
 			console.log('resposta 7');
+			results.forEach((v, i) => {
+				console.log(`${ i + 1}. ${v}`);
+			});
 			//insira a resposta aqui.
 		</script>
 		<div class="border"></div>
@@ -128,6 +186,12 @@
 		<div></div>
 		<script>
 			console.log('resposta 8');
+
+			let divs = document.querySelectorAll("div:not([class]):not([style])");
+			divs.forEach((v, i) => {
+				v.setAttribute("data-id", i);
+			});
+			console.log('let divs = document.querySelectorAll("div:not([class]):not([style])");\ndivs.forEach((v, i) => {\n    v.setAttribute("data-id", i);\n});');
 			//insira a resposta aqui.
 		</script>
 		<div class="border"></div>
@@ -153,6 +217,29 @@
 		</div>
 		<script>
 			console.log('resposta 9');
+			
+			let div_content = document.querySelector(".content");
+			let li = div_content.children[0].children[0];
+			
+			li.addEventListener("click", () => {
+				let div_subcontainer = document.querySelector(".subcontainer"); 
+				let ul_subcontainer = div_subcontainer.children[0];
+
+				ul_subcontainer.style = "";
+				div_content.classList.add("active");
+				div_subcontainer.classList.add("active");
+			});
+
+			console.log('let div_content = document.querySelector(".content");\
+				\nlet li = div_content.children[0].children[0];\
+				\n\nli.addEventListener("click", () => {\
+					\n	let div_subcontainer = document.querySelector(".subcontainer");\
+					\n	let ul_subcontainer = div_subcontainer.children[0];\
+					\n\n	ul_subcontainer.style = "";\
+					\n	div_content.classList.add("active");\
+					\n	div_subcontainer.classList.add("active");\
+				\n});');
+
 			//insira a resposta aqui.
 		</script>
 		<div class="border"></div>
@@ -176,6 +263,8 @@
 				}, 1000);
 			}
 			observer();
+
+			console.log("Respota: 4. Observa o código por 5 segundos para encontrar o elemento. Caso não encontrado, a execução é interrompida.")
 		</script>
 		<p>Escolha a alternativa que melhor interpreta o que o bloco de código acima está fazendo?</p>
 		<ol>
